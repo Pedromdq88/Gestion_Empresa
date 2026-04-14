@@ -1,4 +1,5 @@
 package Entity;
+import jakarta.persistence.Entity;
 import lombok.*;
 
 
@@ -7,12 +8,15 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Info_General {
-
+    private Long id;
     private char nombre_completo;
     private  String dni;
     private char mail;
     private String password;
+
+    private Rol rol;
 
     public char getNombre_completo() {
         return nombre_completo;
